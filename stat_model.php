@@ -628,7 +628,7 @@
 				$where[] = "a.diet_tp IN ('".implode("','", $diet)."')";
 				$flg['conf']=true;
 			}elseif($flg_diet and count($_SESSION['search']['sys_tp'])==0 and !$flg_sys){
-				$where[] = "a.diet_tp != ''";
+				$where[] = "a.diet_tp::text != ''";
 				$flg['conf']=true;
 			}
 
