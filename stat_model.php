@@ -699,8 +699,8 @@
 			}
 			
 			if(isset($where2)){
-				$where2 = preg_replace("~^ OR~", " AND", $where2,-1);
-				$where2 = preg_replace("~^ AND~", "~ AND(~", $where2,-1) . "~)~" ;
+				$where2 = preg_replace("/^ OR/", " AND", $where2,-1);
+				$where2 = preg_replace("/^ AND/", " AND(", $where2,-1) . ")" ;
 			}
 			
 			if(isset($where)){
