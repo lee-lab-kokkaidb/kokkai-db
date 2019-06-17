@@ -1,5 +1,5 @@
 <?php
-
+	require "db.php";
 	class stat_model extends db {
 		private $query = "SET statement_timeout to 0";
 		function __autoload($class_name) {
@@ -86,7 +86,7 @@
 						
 						group by parties, talker_name
 						order by {$_SESSION['search']['order']} {$_SESSION['search']['direction']}";
-			//echo $query.'<br>';
+			echo $query.'<br>';
  			return $this->db_query_fetch($query);
 
 		}
@@ -160,7 +160,7 @@
 						
 						group by parties, talker_name
 						order by {$_SESSION['search']['order']} {$_SESSION['search']['direction']}";
-
+			echo $query;
  			return $this->db_query_fetch($query);
 
 		}
@@ -191,7 +191,7 @@
 
 			//echo $query.'<br>';
 			$line = $this->db_query_fetch($query);
-
+			echo $query;
 			return array($line[0]['cnt'], ceil($line[0]['cnt'] / $disp_rows));
 		}
 
