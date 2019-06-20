@@ -81,7 +81,7 @@
 		$smarty->assign("label", make_month($lines));							// 表示ラベルの生成
 		if($lines!=''){
 			foreach($lines as $key => $line){
-				$tmp = explode(",",ereg_replace("^{|}$","", $key));
+				$tmp = explode(",",preg_replace("^{|}$","", $key,-1));
 				if(count($tmp)!=2) continue;
 				$lines[$key]['parties'] = $tmp[0];
 				$lines[$key]['name'] = $tmp[1];
@@ -94,7 +94,7 @@
 		$smarty->assign("label", make_year($lines));							// 表示ラベルの生成
 		if($lines!=''){
 			foreach($lines as $key => $line){
-				$tmp = explode(",",ereg_replace("^{|}$","", $key));
+				$tmp = explode(",",preg_replace("^{|}$","", $key,-1));
 				if(count($tmp)!=2) continue;
 				$lines[$key]['parties'] = $tmp[0];
 				$lines[$key]['name'] = $tmp[1];
