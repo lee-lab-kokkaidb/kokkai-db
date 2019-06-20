@@ -136,21 +136,21 @@
 			}
 			
 			if(isset($where2)){
-				$where2 = ereg_replace("^ OR", " AND", $where2);
-				$where2 = ereg_replace("^ AND", " AND(", $where2) . ")" ;
+				$where2 = preg_replace("/^ OR/", " AND", $where2,-1);
+				$where2 = preg_replace("/^ AND/", " AND(", $where2,-1) . ")" ;
 			}
 			
 			if(isset($where) && $replace_where)
-				$where = ereg_replace("^ AND", " WHERE", $where);
+				$where = preg_replace("/^ AND/", " WHERE", $where,-1);
 			// 集計内選択の反映
 			switch($_SESSION['pop']['rpt']){
 			case '01':		// 発言者別月別   会議別と共通
 			case '02':		// 発言者別年別   会議別と共通
 			case '03':		// 発言者別会議別
-				$_SESSION['pop']['col'] = ereg_replace('sum', '', $_SESSION['pop']['col']);
-				$tmp = explode(",",ereg_replace("^{|}$","", $_SESSION['pop']['row']));
+				$_SESSION['pop']['col'] = preg_replace('sum', '', $_SESSION['pop']['col'],-1);
+				$tmp = explode(",",preg_replace("/^{|}$/","", $_SESSION['pop']['row'],-1));
 				if(count($tmp)==2){
-					$tmp[0] = ereg_replace("政党無し","",$tmp[0]);
+					$tmp[0] = preg_replace("政党無し","",$tmp[0],-1);
 					$where .= " and c.parties = '{$tmp[0]}' and c.talker_name = '{$tmp[1]}'";
 				}else{
 					$where .= " and c.talker_name = '{$_SESSION['pop']['row']}'";
@@ -167,7 +167,7 @@
 				break;
 			case '08':		// 政党別月別
 			case '09':		// 政党別年別
-				$_SESSION['pop']['row'] = ereg_replace('政党無し', '', $_SESSION['pop']['row']);
+				$_SESSION['pop']['row'] = preg_replace('政党無し', '', $_SESSION['pop']['row'],-1);
 				$where .= " and c.parties = '{$_SESSION['pop']['row']}'";
 				break;
 			}

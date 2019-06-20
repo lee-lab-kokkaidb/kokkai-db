@@ -22,7 +22,7 @@
 
 	foreach($_SESSION['search']['option'] as $key => $option){
 		if($_SESSION['search']['option_value'][$key]=="") continue;
-		if($option=="発言内容") $info[0]['content'] = ereg_replace($_SESSION['search']['option_value'][$key],"<b>" . $_SESSION['search']['option_value'][$key]."</b>",  $info[0]['content']);
+		if($option=="発言内容") $info[0]['content'] = preg_replace($_SESSION['search']['option_value'][$key],"<b>" . $_SESSION['search']['option_value'][$key]."</b>",  $info[0]['content'],-1);
 	}
 
 
