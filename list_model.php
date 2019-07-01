@@ -147,10 +147,10 @@
 			case '01':		// 発言者別月別   会議別と共通
 			case '02':		// 発言者別年別   会議別と共通
 			case '03':		// 発言者別会議別
-				$_SESSION['pop']['col'] = preg_replace('sum', '', $_SESSION['pop']['col'],-1);
+				$_SESSION['pop']['col'] = preg_replace('/sum/', '//', $_SESSION['/pop/']['/col/'],-1);
 				$tmp = explode(",",preg_replace("/^{|}$/","", $_SESSION['pop']['row'],-1));
 				if(count($tmp)==2){
-					$tmp[0] = preg_replace("政党無し","",$tmp[0],-1);
+					$tmp[0] = preg_replace("/政党無し/","",$tmp[0],-1);
 					$where .= " and c.parties = '{$tmp[0]}' and c.talker_name = '{$tmp[1]}'";
 				}else{
 					$where .= " and c.talker_name = '{$_SESSION['pop']['row']}'";
