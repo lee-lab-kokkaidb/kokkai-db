@@ -191,7 +191,6 @@
 
 			//echo $query.'<br>';
 			$line = $this->db_query_fetch($query);
-			//echo $query;
 			return array($line[0]['cnt'], ceil($line[0]['cnt'] / $disp_rows));
 		}
 
@@ -210,7 +209,6 @@
 			}
 			$query .= "						group by parties, talker_name
 						)as c";
-
 			$line = $this->db_query_fetch($query);
 
 			return array($line[0]['cnt'], ceil($line[0]['cnt'] / $disp_rows));
@@ -229,7 +227,6 @@
 			}				
 			$query .= "{$where[1]} {$where[2]}
 					) as c";
-			
 			$line = $this->db_query_fetch($query);
 			return array($line[0]['cnt'], ceil($line[0]['cnt'] / $disp_rows));
 		}
@@ -272,7 +269,7 @@
 						) as cnt1
 						group by diet_tp, sys_tp, conf_dt
 						order by {$_SESSION['search']['order']} {$_SESSION['search']['direction']} , conf_dt";
- 			return $this->db_query_fetch($query);
+			return $this->db_query_fetch($query);
 		}
 
 		function get_stat_db_year($disp_rows){
@@ -312,7 +309,8 @@
 			$query.= "							{$where[1]} {$where[2]}
 						) as cnt1						group by diet_tp, sys_tp, conf_dt
 						order by  {$_SESSION['search']['order']} {$_SESSION['search']['direction']} , conf_dt";
- 			return $this->db_query_fetch($query);
+			 
+			return $this->db_query_fetch($query);
 		}
 
 		function get_stat_conf_pages($disp_rows){
@@ -337,6 +335,7 @@
 						group by conf_tp
 						) as cnt1";
 			$line = $this->db_query_fetch($query);
+			
 			return array($line[0]['cnt'], ceil($line[0]['cnt'] / $disp_rows));
 		}
 
@@ -366,7 +365,8 @@
 						) as cnt1
 						group by conf_tp, conf_dt
 						order by {$_SESSION['search']['order']} {$_SESSION['search']['direction']} , conf_dt";
- 			return $this->db_query_fetch($query);
+			 
+			return $this->db_query_fetch($query);
 		}
 
 		function get_stat_conf_year($disp_rows){
@@ -394,6 +394,7 @@
 						) as cnt1
 						group by conf_tp, conf_dt
 						order by {$_SESSION['search']['order']} {$_SESSION['search']['direction']} , conf_dt";
+
  			return $this->db_query_fetch($query);
 		}
 
@@ -433,7 +434,6 @@
 					{$where[1]} {$where[2]}
 					group by parties, c.talker_name,  date_trunc('month', b.conf_dt)
 					order by {$_SESSION['search']['order']} {$_SESSION['search']['direction']} , conf_dt";
-
  			return $this->db_query_fetch($query);
 		}
 
@@ -497,6 +497,7 @@
 			}
 			$query.= "						group by parties
 						)as c";
+
 			$line = $this->db_query_fetch($query);
 			return array($line[0]['cnt'], ceil($line[0]['cnt'] / $disp_rows));
 		}
@@ -540,7 +541,8 @@
 					group by c.parties,  date_trunc('month', b.conf_dt)
 					order by {$_SESSION['search']['order']} {$_SESSION['search']['direction']} , conf_dt";
 
- 			return $this->db_query_fetch($query);
+			 
+			return $this->db_query_fetch($query);
 		}
 
 		function get_stat_party_year($disp_rows){
@@ -580,7 +582,8 @@
 					{$where[1]} {$where[2]}
 					group by c.parties,  date_trunc('year', b.conf_dt)
 					order by {$_SESSION['search']['order']} {$_SESSION['search']['direction']} , conf_dt";
- 			return $this->db_query_fetch($query);
+			 
+			return $this->db_query_fetch($query);
 		}
 
 
