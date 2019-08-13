@@ -212,7 +212,7 @@ $smarty->assign('alert', "Did nothing in $time seconds\n{$model->lasterror}");
 	function make_year(&$lines){
 		if($lines == '') return array();										// データがないときはリターン
 
-		// 全期間は暫定であるデータ分
+/*		// 全期間は暫定であるデータ分
 		// データを表示用ハッシュに変換
 		$max = $lines[0]['conf_dt'];
 		$min = $lines[0]['conf_dt'];
@@ -241,7 +241,8 @@ $smarty->assign('alert', "Did nothing in $time seconds\n{$model->lasterror}");
 		for($i=0;$i<$cnt_year;$i++){
 			$label[] = $min + $i;
 		}
-/*	データ存在分だけバージョン
+*/
+	//データ存在分だけバージョン
 
 		$max = $lines[0]['conf_dt'];
 		$min = $lines[0]['conf_dt'];
@@ -260,7 +261,7 @@ $smarty->assign('alert', "Did nothing in $time seconds\n{$model->lasterror}");
 		for($i=0;$i<$cnt_year;$i++){
 			$label[] = $min + $i;
 		}
-*/
+
 		return $label;
 
 	}
