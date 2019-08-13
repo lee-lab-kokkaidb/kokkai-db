@@ -1,0 +1,195 @@
+/* General page styles ---------------------------------------------------- */
+body, html {
+	margin: 0px;
+	padding: 0px;
+	color: black;
+	background-color: white;
+	font-family: sans-serif;
+}
+form input {
+	border-color: #ACACAC #E1E1E1 #E1E1E1 #ACACAC;
+	border-width: 1px;
+	margin-right: 6px;
+	padding: 1px 3px;
+}
+
+a {
+	cursor: pointer;
+	margin: 0px;
+	padding: 0px;
+	text-decoration: underline;
+	font-weight:bold;
+}
+
+a:link, a:visited, a:active, a:hover {
+	margin: 0px;
+	padding: 0px;
+}
+
+img.tab {
+	border: 0px;
+	margin: 0px -2px -3px -2px;
+	padding: 0px;
+}
+
+hr {
+	border: 1px;
+	background-color: #B4B4B4;
+	height: 1px;
+	margin: -1px;
+	padding: 0px;
+}
+
+table {
+	overflow:scroll;
+}
+
+th {
+	padding: 3px;
+	color: #FFFFFF;
+	background-color: #999999;	
+}
+
+td {
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;	
+}
+
+td.help {
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;	
+}
+td.title {
+	background-color: #D4DBDF;
+	text-align:left;
+	font-weight:bold;
+}
+
+tr {
+	color: #000000;
+	background-color: #EEEEEE;
+ 	text-align: left;
+ }
+
+tr.login {
+	color: #000000;
+	background-color: #FFFFFF;	
+}
+
+div.main {
+	margin: 0px 0px 10px 10px;
+}
+
+div.paddingbox {
+	padding:0px 15px 0px 15px;
+	font-family: monospace;
+}
+
+div.box {
+	border-color: #ACACAC #E1E1E1 #E1E1E1 #ACACAC;
+	border-style: solid;
+	border-width: 2px;
+	text-align:left;
+	float: left;
+	margin: 10px 10px 10px 10px;
+	padding:0px 0px 0px 0px;
+}
+div.box2 {
+	width: 600px;
+	border-color: #ACACAC #E1E1E1 #E1E1E1 #ACACAC;
+	border-style: solid;
+	border-width: 2px;
+	text-align:left;
+	float: left;
+	margin: 5px;
+	padding: 10px;
+}
+
+input.search{
+	background: url(images/btn_search.gif) ;
+	width: 100px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.reset{
+	background: url(images/btn_reset.gif) ;
+	width: 50px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.back{
+	background: url(images/btn_back.gif) ;
+	width: 100px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.close{
+	background: url(images/btn_close.gif) ;
+	width: 100px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+
+input.all{
+	background: url(images/btn_all.gif) ;
+	width: 50px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.clear{
+	background: url(images/btn_clear.gif) ;
+	width: 50px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.reg{
+	background: url(images/btn_reg.gif) ;
+	width: 50px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.reg2{
+	background: url(images/btn_reg2.gif) ;
+	width: 50px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.regist{
+	background: url(images/btn_regist.gif) ;
+	width: 100px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.show{
+	background: url(images/btn_show.gif) ;
+	width: 50px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.change{
+	background: url(images/btn_change.gif) ;
+	width: 50px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.update{
+	background: url(images/btn_update.gif) ;
+	width: 50px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+
+input.del{
+	background: url(images/btn_del.gif) ;
+	width: 50px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.login{
+	background: url(images/btn_login.gif) ;
+	width: 100px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.agree{
+	background: url(images/btn_agree.gif) ;
+	width: 100px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.disagree{
+	background: url(images/btn_disagree.gif) ;
+	width: 75px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+input.down{
+	background: url(images/btn_down.gif) ;
+	width: 100px; height: 25px; margin: 0px; padding: 0px; border: 0px;
+}
+
+b{
+	background-color: #FF8888;	
+}
+.alert{
+	color: #FF0000;	
+}
+.page{
+	font: normal 12px Arial, sans-serif;
+}
+.glay{
+	color: #999999;
+}
+div.report{
+	font-weight:bold;
+}
