@@ -173,13 +173,12 @@
 			}
 
 			if($_SESSION['pop']['col'] != 'all'){
-				echo "check:<br>"."{$_SESSION['pop']['col']}";
 				switch($_SESSION['pop']['rpt']){
 				case '01':		// 発言者別月別   会議別と共通
 				case '04':		// DB別月別
 				case '06':		// 会議別月別
 				case '08':		// 政党別月別
-					$where .= " and date_trunc('month', b.conf_dt) ="."{$_SESSION['pop']['col']}"."/01 00:00:00'";
+					$where .= " and date_trunc('month', b.conf_dt) = '{$_SESSION['pop']['col']}/01 00:00:00'";
 					break;
 				case '02':		// 発言者別年別   会議別と共通
 				case '05':		// DB別年別 月別と共通
