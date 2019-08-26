@@ -54,7 +54,7 @@
 	
 		// SQL クエリを実行する(結果セット有り)
 		function db_query_fetch($sql){
-				echo "SQL DEBUG:"."$sql"."<br><br>";
+				//echo "SQL DEBUG:"."$sql"."<br><br>"; <2019/08/26検索作業の為解除>
 //$time_start = microtime(true);
 			$result = pg_query($this->dbconn, (string)$sql) or $this->lasterror = pg_last_error();
 			if (!$result) {

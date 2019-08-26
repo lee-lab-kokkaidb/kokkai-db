@@ -62,9 +62,9 @@
 <tr>
 	<td nowrap width=15% class=title>検索期間</td>
 	<td nowrap width=80%>
-		<input type=radio name=time value=0 {if $search.time == 0 || $search.time == ''}checked{/if}>期間指定
+		<!--<input type=radio name=time value=0 {if $search.time == 0 || $search.time == ''}checked{/if}>期間指定
 		{html_radios options=$period name="period" selected=$search.period|default:'1'  onclick="document.main.time[0].checked= true"}
-		<br>
+		<br>-->
 		<input type=radio name=time value=1 {if $search.time == 1}checked{/if}>日付指定&nbsp;
 		{php}
 			if(isset($_SESSION['search']['date_s'])){
